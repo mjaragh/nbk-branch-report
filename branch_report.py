@@ -1,4 +1,4 @@
-"""NBK Branch Daily Report.
+"""NBK Branch Daily Report (Version A).
 
 Reads the branch database, finds yesterday's large cash withdrawals, and prints a
 report a branch manager could act on.
@@ -38,7 +38,7 @@ def flag_large_withdrawals(withdrawals, threshold=FLAG_THRESHOLD_KWD):
     """
     flagged = []
     for w in withdrawals:
-        if w["amount_kwd"] > threshold:
+        if w["amount_kwd"] >= threshold:
             flagged.append(w)
     return flagged
 
