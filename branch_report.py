@@ -1,4 +1,4 @@
-"""NBK Branch Daily Report.
+"""NBK Branch Daily Report (Version B).
 
 Reads the branch database, finds yesterday's large cash withdrawals, and prints a
 report a branch manager could act on.
