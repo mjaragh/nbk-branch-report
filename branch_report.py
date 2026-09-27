@@ -10,6 +10,12 @@ import sqlite3
 DB_PATH = "nbk_demo.db"
 FLAG_THRESHOLD_KWD = 10000
 
+try:
+    conn = sqlite3.connect(DB_PATH)
+except sqlite3.OperationalError:
+    print(f"Could not open database at {DB_PATH}")
+    raise
+
 QUERY = """
 SELECT t.txn_id,
        a.customer_name,
